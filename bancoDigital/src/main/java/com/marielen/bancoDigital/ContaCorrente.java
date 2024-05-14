@@ -4,16 +4,13 @@
  */
 package com.marielen.bancoDigital;
 
-/**
- *
- * @author CCE
- */
+
 public class ContaCorrente extends Conta {
     
    private String tipoConta = "Corrente";
     
    @Override
-  public void imprimir(){
+    public void imprimir(){
       System.out.println("Tipo da Conta: " + this.tipoConta);
       super.imprimir();
   }

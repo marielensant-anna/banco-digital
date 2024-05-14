@@ -24,42 +24,13 @@ public class Banco {
         return nome;
     }
 
-    public List<Cliente> getClientes() {
-        return clientes;
-    }
-
-    public List<Conta> getContas() {
-        return contas;
-    }
-
-    public void setClientes(List<Cliente> clientes) {
-        this.clientes = clientes;
-    }
-
-    public void setContas(List<Conta> contas) {
-        this.contas = contas;
-    }
-    
     public void imprimirBanco(){
         System.out.println("Nome: " + this.nome);
-        System.out.println("Contas: " + contas);
         System.out.println("Clientes:" + clientes);
     }
    
-    
-    public void adicionarContaCorrente(Conta contaCorrente){
-       contas.add(contaCorrente);
-    }
-    
-    public void adicionarContaPoupanca(Conta contaPoupanca){
-       contas.add(contaPoupanca);
-    }
-    
     public void adicionarCliente(Cliente cliente){
         clientes.add(cliente);
     }
-    
-    
-    
-    
+
 }

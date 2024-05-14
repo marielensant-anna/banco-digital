@@ -20,7 +20,7 @@ public abstract class Conta implements IConta {
         this.numero = SEQUENCIAL ++;
         
     }
-    
+
     public int getAgencia() {
         return agencia;
     }
@@ -32,12 +32,7 @@ public abstract class Conta implements IConta {
     public double getSaldo() {
         return saldo;
     }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
-    
+   
     @Override
     public void sacar(double valor){
        if (saldo < valor){

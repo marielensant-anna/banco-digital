@@ -4,10 +4,6 @@
  */
 package com.marielen.bancoDigital;
 
-/**
- *
- * @author CCE
- */
 public class ContaPoupanca extends Conta {
   private String tipoConta = "Poupança";
     

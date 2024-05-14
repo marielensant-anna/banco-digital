@@ -4,44 +4,37 @@
  */
 package com.marielen.bancoDigital;
 
-/**
- *
- * @author CCE
- */
 public class Cliente {
     private String nome;
     private String cpf;
+    private Conta conta;
+    private Banco banco;
 
     public Cliente(String nome, String cpf){
         this.nome = nome;
         this.cpf = cpf;
     }
-    
-    /*public Cliente(String nome, String cpf, Conta contaPoupanca){
-        this.nome = nome;
-        this.cpf = cpf;
-        this.contaPoupanca = contaPoupanca;
-    }*/
-    
-    public String getNome() {
-        return nome;
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
     }
 
-    public String getCpf() {
-        return cpf;
+    public void setBanco(Banco banco) {
+        this.banco = banco;
+        banco.adicionarCliente(this);
     }
-
     
     public void imprimir(){
         System.out.println("Nome: " + this.nome);
         System.out.println("CPF: " + this.cpf);
-        
+        System.out.println("Banco: " + this.banco.getNome());
+        System.out.println("Conta: ");
+        this.conta.imprimir();
+     
     }
 
     @Override
     public String toString() {
-        return "Cliente{" + "nome=" + nome + ", cpf=" + cpf +  '}';
+        return "Cliente{" + "nome=" + nome + ", cpf=" + cpf + ", conta=" + conta + '}';
     }
-     
-   
 }
